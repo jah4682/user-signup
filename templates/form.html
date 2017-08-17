@@ -1,0 +1,39 @@
+<!-- form for user-signup Assignment -->
+{% extends "base.html" %}
+{% block content %}
+<h1>Signup</h1>
+
+<form action="/welcome" method="post">
+    <table>
+        <tr>
+            <td><label for="username">Username</label></td>
+            <td>
+                <input id="username" name="username_f" type="text" value="{{username_val}}">
+                <span class="error">{{error_username_f}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="password">Password</label></td>
+            <td>
+                <input id="password" name="password_f" type="password">
+                <span class="error">{{error_pwd_f}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="verify">Verify Password</label></td>
+            <td>
+                <input id="verify" name="verify_f" type="password">
+                <span class="error">{{error_pwdVerify_f}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="email">Email (optional)</label></td>
+            <td>
+                <input id="email" name="email_f" type="text" value="{{email_val}}">
+                <span class="error">{{error_email_f}}</span>
+            </td>
+        </tr>
+    </table>
+    <input type="submit">
+</form>
+{% endblock %}
